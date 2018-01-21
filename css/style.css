@@ -1,9 +1,7 @@
 /* style de la page */
 
-html,
 body {
-  height: 100%;
-  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper {
@@ -14,45 +12,54 @@ body {
   height: 100%;
 }
 
-aside {
-  position: relative;
+header {
+  position: fixed;
   width: 50%;
-  background: url(../images/student.jpg) no-repeat center;
+  height: 100vh;
+  background: url(../images/student.jpg) no-repeat;
+  background-position: center;
   background-size: cover;
-  background-position: top;
 }
 
-aside > * {
+header > * {
   position: absolute;
 }
 
-aside .logo {
+header .logo {
+  width: 100px;
   top: 50px;
   left: 50px;
 }
 
-aside .logo img {
+header .logo img {
   display: inline;
 }
 
-aside .logo h1 {
+header .logo h1 {
+  background: url(../images/onews.svg) no-repeat;
+  background-size: 35px;
+  background-position: 0 4px;
+  padding-left: 45px;
   color: #fff;
+  font-size: 2.5em;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .latest_news--title {
   text-align: right;
 }
 
-aside h2 {
+header h2 {
   display: inline-block;
   color: #fff;
 }
 
-aside span {
+header span {
   display: inline-block;
 }
 
-aside .latest_news {
+header .latest_news {
   position: absolute;
   width: 75%;
   color: #fff;
@@ -61,17 +68,17 @@ aside .latest_news {
   transform: translateY(-50%);
 }
 
-aside .latest_news p {
+header .latest_news p {
   margin-top: 5px;
   text-align: right;
 }
 
-aside footer {
+header footer {
   bottom: 0;
   right: 5px;
 }
 
-aside footer ul li {
+header footer ul li {
   font-size: 1.2em;
   font-weight: bold;
   display: inline;
@@ -82,7 +89,13 @@ footer a {
   color: #fff;
 }
 
+footer a:hover {
+  color: #fff;
+}
+
 main {
+  margin-left: 50%;
+  position: relative;
   width: 50%;
 }
 
@@ -94,17 +107,18 @@ main {
 }
 
 .main_title {
+  font-size: 2.4em;
+  font-weight: bold;
   margin: 0;
   padding: 20px;
   background-color: #eee;
 }
 
-
 #posts .post {
   width: 50%;
   border-top: 1px solid #eaeaea;
   border-right: 1px solid #eaeaea;
-  padding: 20px;
+  padding: 2em;
 }
 
 span.label {
@@ -116,20 +130,26 @@ span.label {
   border-radius: 5px;
 }
 
+span.label a {
+  color: #fff;
+}
+
 .red {
-  background-color: #DC5E53;;
+  background-color: #dc5e53;
 }
 
 .blue {
-  background-color: #0766F0;
+  background-color: #0766f0;
 }
 
 .green {
-  background-color: #98DC62;
+  background-color: #98dc62;
 }
 
 .post h1 {
-  margin: 25px 0;
+  font-size: 2.2em;
+  line-height: 1.5;
+  margin: 15px 0;
 }
 
 .post img {
@@ -144,6 +164,8 @@ span.label {
 .post .meta a {
   color: #000;
   font-weight: bold;
+  font-size: 0.8em;
+  margin-left: 5px;
 }
 
 .post .meta .date {
@@ -157,4 +179,12 @@ span.label {
 .post .readmore {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.post .readmore a {
+  color: #007bff;
+}
+
+.post .readmore a:hover {
+  color: #0056b3;
 }
