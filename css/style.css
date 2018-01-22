@@ -53,6 +53,8 @@ header .logo h1 {
 header h2 {
   display: inline-block;
   color: #fff;
+  font-size: 1.8em;
+  margin-right: 10px;
 }
 
 header span {
